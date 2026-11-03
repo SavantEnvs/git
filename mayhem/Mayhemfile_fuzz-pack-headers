@@ -1,0 +1,11 @@
+# libFuzzer harness oss-fuzz/fuzz-pack-headers.c (from upstream's oss-fuzz/ directory)
+project: savantenvs/git
+target: fuzz-pack-headers
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-pack-headers/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz-pack-headers
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz-pack-headers/fuzz-pack-headers.dict
+    timeout: 10

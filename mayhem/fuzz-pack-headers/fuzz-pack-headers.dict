@@ -1,0 +1,15 @@
+# pack object header: byte 0 = MSB-continue | type<<4 | low 4 size bits (types 1-4 plain, 6 OFS_DELTA, 7 REF_DELTA)
+"\x10"
+"\x20"
+"\x30"
+"\x40"
+"\x60"
+"\x70"
+"\x9f"
+"\xbf"
+"\xdf"
+"\xff"
+# varint continuation / terminator bytes
+"\x80"
+"\xff\xff\xff\xff"
+"\x7f"

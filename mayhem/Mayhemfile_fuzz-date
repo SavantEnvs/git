@@ -1,0 +1,10 @@
+# libFuzzer harness oss-fuzz/fuzz-date.c (from upstream's oss-fuzz/ directory)
+project: savantenvs/git
+target: fuzz-date
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-date/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz-date
+    libfuzzer: true
+    timeout: 10

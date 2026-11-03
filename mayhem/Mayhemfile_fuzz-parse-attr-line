@@ -1,0 +1,10 @@
+# libFuzzer harness oss-fuzz/fuzz-parse-attr-line.c (from upstream's oss-fuzz/ directory)
+project: savantenvs/git
+target: fuzz-parse-attr-line
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-parse-attr-line/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz-parse-attr-line
+    libfuzzer: true
+    timeout: 10

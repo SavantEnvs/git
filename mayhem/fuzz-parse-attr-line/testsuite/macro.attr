@@ -1,0 +1,2 @@
+[attr]binary -diff -merge -text
+*.png binary

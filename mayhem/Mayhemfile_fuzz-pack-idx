@@ -1,0 +1,11 @@
+# libFuzzer harness oss-fuzz/fuzz-pack-idx.c (from upstream's oss-fuzz/ directory)
+project: savantenvs/git
+target: fuzz-pack-idx
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-pack-idx/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz-pack-idx
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz-pack-idx/fuzz-pack-idx.dict
+    timeout: 10

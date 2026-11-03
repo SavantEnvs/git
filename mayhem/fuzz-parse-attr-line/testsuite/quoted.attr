@@ -1,0 +1,1 @@
+"quoted name.txt" -text !export-ignore filter=lfs foo=bar

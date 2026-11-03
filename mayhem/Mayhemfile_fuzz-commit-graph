@@ -1,0 +1,10 @@
+# libFuzzer harness oss-fuzz/fuzz-commit-graph.c (from upstream's oss-fuzz/ directory)
+project: savantenvs/git
+target: fuzz-commit-graph
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-commit-graph/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz-commit-graph
+    libfuzzer: true
+    timeout: 10
